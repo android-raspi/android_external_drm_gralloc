@@ -192,7 +192,7 @@ static int drm_mod_close_gpu0(struct hw_device_t *dev)
 {
 	struct alloc_device_t *alloc = (struct alloc_device_t *) dev;
 
-	delete alloc;
+	free(alloc);
 
 	return 0;
 }
@@ -243,7 +243,7 @@ static int drm_mod_open_gpu0(struct drm_module_t *dmod, hw_device_t **dev)
 	if (err)
 		return err;
 
-	alloc = new alloc_device_t;
+	alloc = calloc(1, sizeof(*alloc));
 	if (!alloc)
 		return -EINVAL;
 

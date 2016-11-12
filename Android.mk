@@ -84,7 +84,7 @@ LOCAL_MODULE := libgralloc_drm
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := \
-	gralloc_drm.cpp
+	gralloc_drm.c
 
 LOCAL_C_INCLUDES := \
 	external/libdrm \
@@ -158,7 +158,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := \
-	gralloc.cpp
+	gralloc.c \
 
 LOCAL_C_INCLUDES := \
 	external/libdrm \
