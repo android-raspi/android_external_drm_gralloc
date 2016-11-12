@@ -84,7 +84,8 @@ LOCAL_MODULE := libgralloc_drm
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES := \
-	gralloc_drm.c
+	gralloc_drm.c \
+	gralloc_drm_kms.c
 
 LOCAL_C_INCLUDES := \
 	external/libdrm \

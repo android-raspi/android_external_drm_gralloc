@@ -46,6 +46,8 @@ struct gralloc_drm_handle_t {
 	int format;
 	int usage;
 
+	unsigned int plane_mask; /* planes that support handle */
+
 	int name;   /* the name of the bo */
 	int stride; /* the stride in bytes */
 
